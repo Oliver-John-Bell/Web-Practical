@@ -1,0 +1,3 @@
+There is an app within the practical django project for each practical work.
+This can be navigated to by /practical<>/...
+Developer/Debug mode is still enabled and will show what urls are avilable in each practical.
