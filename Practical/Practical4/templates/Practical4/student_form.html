@@ -1,0 +1,21 @@
+<!-- Practical4/templates/Practical4/student_form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Form</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Student Form</h1>
+    <form method="post" action="{% url 'Practical4:student_form' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" name="submit">Submit</button>
+    </form>
+    <form method="post" action="{% url 'Practical4:view_database' %}">
+        {% csrf_token %}
+        <button type="submit" name="show_database">Show Database</button>
+    </form>
+</body>
+</html>

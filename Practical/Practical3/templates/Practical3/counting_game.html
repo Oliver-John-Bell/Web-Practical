@@ -1,0 +1,18 @@
+<!-- Practical3/templates/Practical3/counting_game.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counting Game</title>
+</head>
+<body>
+    <h1>Counting Game</h1>
+    <pre>
+    {% for line in stars %}
+{{ line }}
+    {% endfor %}
+    </pre>
+    <form action="{% url 'Practical3:download_stars' number %}" method="get">
+        <button type="submit">Download as .txt</button>
+    </form>
+</body>
+</html>
